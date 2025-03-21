@@ -106,6 +106,7 @@ async def run_browser_agent(task: str, add_infos: str = "") -> str:
                     headless=headless,
                     disable_security=disable_security,
                     extra_chromium_args=extra_chromium_args,
+                    chrome_instance_path=os.getenv("CHROME_PATH", None),
                 )
             )
 
